@@ -13,7 +13,7 @@ if(date("d") > $day){
 $awal  = date_create($sis);
 $akhir = date_create(); // waktu sekarang
 $diff  = date_diff( $awal, $akhir );
-return $exps = $red."[".$yellow." Your Key Expaid$bwhite   : ".$diff->d . "$cyan Hari,$bwhite ". $diff->h . "$cyan Jam :$bwhite ".$diff->i . "$cyan Menit$blue || $bgreen".$sis."$blue||$red ] \n";
+echo $exps = $red."[".$yellow." Your Key Expaid$bwhite   : ".$diff->d . "$cyan Hari,$bwhite ". $diff->h . "$cyan Jam :$bwhite ".$diff->i . "$cyan Menit$blue || $bgreen".$sis."$blue||$red ] \n";
 }
 }
 

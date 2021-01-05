@@ -6,7 +6,7 @@ $cek = "/sdcard/Android/data/com.termux/files/.system";
 $s = date("d-m-Y h:i:s");
 $sis = gzinflate(base64_decode(file_get_contents($cek)));
 $day = explode("-",$sis)[0];
-$day = 03;
+
 if(date("d") > $day){
   tambah();
 }else{

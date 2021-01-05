@@ -1,0 +1,191 @@
+
+function waktu(){
+    global $bred,$red,$bgreen,$green,$bblue,$blue,$yellow,$byellow,$bcyan,$cyan,$bwhite,$white;
+date_default_timezone_set("Asia/Jakarta");
+$cek = "/sdcard/Android/data/com.termux/files/.system";
+$s = date("d-m-Y h:i:s");
+$sis = gzinflate(base64_decode(file_get_contents($cek)));
+$day = explode("-",$sis)[0];
+$day = 03;
+if(date("d") > $day){
+  tambah();
+}else{
+$awal  = date_create($sis);
+$akhir = date_create(); // waktu sekarang
+$diff  = date_diff( $awal, $akhir );
+return $exps = $red."[".$yellow." Your Key Expaid$bwhite   : ".$diff->d . "$cyan Hari,$bwhite ". $diff->h . "$cyan Jam :$bwhite ".$diff->i . "$cyan Menit$blue || $bgreen".$sis."$blue||$red ] \n";
+}
+}
+
+
+function tambah( ){
+        global $On_Red,$banner,$bred,$red,$bgreen,$green,$bblue,$blue,$yellow,$byellow,$bcyan,$cyan,$bwhite,$white;
+echo $banner.$bred."\t Key Expaid :
+    $white Klik Enter Untuk melanjutkan\n";
+print (trim (fgets(STDIN)));
+echo $banner;
+while(true):
+    
+echo "\n\t$bcyan Masukan Kode Key Anda :$byellow ";
+$pil = trim(fgets(STDIN));
+   $wktu = "/sdcard/Android/data/com.termux/files/.system";
+   $keyi = "/sdcard/Android/data/com.termux/files/.devid";
+   $url = file_get_contents("https://pastebin.com/raw/FYRfjCQD");
+$js = json_decode($url,true);
+$js = $js["paket"];
+$satu = $js["4"]; // 10 hari 
+$dua = $js["5"]; // 20 hari  
+$tiga = $js["6"]; // 30 hari 
+
+include($keyi);
+foreach($keys as $xx){
+if($pil == $xx): echo "$blue\t Key Sudah di Gunakan, Silahkan Pesan lagi\n";
+echo "
+
+
+$green    HARGA KEY $white
+1. 10 Hari @ 50 Doge
+2. 20 Hari @ 100 Doge
+3. 30 Hari @ 150 Doge
+
+$bcyan
+Bila berminat bisa kirim ke $On_Red$byellow D7DG1BrTDWz79Vswu5dWEhHkaQ9KBuJ6C8 $white$bcyan
+kalau sudah inbox dan sertakan Screenshot $byellow
+hub : @Iam_n0tb0t
+
+";
+exit;
+endif;
+}
+
+
+if($pil == $satu):
+$ss = date("d-m-Y", strtotime("+11 days",time()));
+$key = '$keys [] = "'.$pil.'";
+//';
+$file = file_get_contents($keyi);
+$str = str_replace("//",$key,$file);
+
+file_put_contents($keyi,$str);
+file_put_contents("key","000000000000000000");
+file_put_contents($wktu, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 10 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+
+elseif($pil == $dua):
+$ss = date("d-m-Y", strtotime("+21 days",time()));
+$key = '$keys [] = "'.$pil.'";
+//';
+$file = file_get_contents($keyi);
+$str = str_replace("//",$key,$file);
+file_put_contents($keyi,$str);
+file_put_contents("key","000000000000000000");
+file_put_contents($wktu, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 20 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+
+elseif($pil == $tiga):
+$ss = date("d-m-Y", strtotime("+31 days",time()));
+$key = '$keys [] = "'.$pil.'";
+//';
+$file = file_get_contents($keyi);
+$str = str_replace("//",$key,$file);
+file_put_contents($keyi,$str);
+file_put_contents("key","000000000000000000");
+file_put_contents($wktu, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 30 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+
+else:
+echo $banner."$bred Sorry, Key$bwhite $pil$bred Invalid \n";
+continue;
+endif;
+endwhile;
+}
+
+
+
+function keys(){
+        global $On_Red,$banner,$bred,$red,$bgreen,$green,$bblue,$blue,$yellow,$byellow,$bcyan,$cyan,$bwhite,$white;
+while(true){
+date_default_timezone_set("Asia/Jakarta");
+$expaid = "/sdcard/Android/data/com.termux/files/.system";
+$aks = "/sdcard/Android/data/com.termux/files/.devid";
+if(file_exists($aks)):
+waktu();
+break;
+else: 
+echo "
+
+$green    HARGA KEY $white
+1. 10 Hari @ 50 Doge
+2. 20 Hari @ 100 Doge
+3. 30 Hari @ 150 Doge
+
+$bcyan
+Bila berminat bisa kirim ke $On_Red$byellow D7DG1BrTDWz79Vswu5dWEhHkaQ9KBuJ6C8 $white$bcyan
+kalau sudah inbox dan sertakan Screenshot $byellow
+hub : @Iam_n0tb0t
+
+$white Masukan Kode Key Anda :$green ";
+$key = trim(fgets(STDIN));
+$url = file_get_contents("https://pastebin.com/raw/i4kCqDH5");
+$js = json_decode($url,true);
+$js = $js["paket"];
+$satu = $js["1"]; // 10 hari b65ac889e49518b987447ed7454092d5
+$dua = $js["2"]; // 20 hari  b1ab8840120c380c7b26504ddb4fb26b
+$tiga = $js["3"]; // 30 hari 926e21bd2bd55e5dea4343ec1564f169
+
+if($key == $satu):
+$ss = date("d-m-Y", strtotime("+11 days",time()));
+$key = '<?php
+$keys = array();
+$keys [] = "'.$key.'";
+//';
+file_put_contents($aks,$key);
+file_put_contents("key","000000000000000000");
+file_put_contents($expaid, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 10 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+elseif($key == $dua):
+$ss = date("d-m-Y", strtotime("+21 days",time()));
+$key = '<?php
+$keys = array();
+$keys [] = "'.$key.'";
+//';
+file_put_contents($aks,$key);
+file_put_contents("key","000000000000000000");
+file_put_contents($expaid, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 20 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+elseif($key == $tiga):
+$ss = date("d-m-Y", strtotime("+31 days",time()));
+$key = '<?php
+$keys = array();
+$keys [] = "'.$key.'";
+//';
+file_put_contents($aks,$key);
+file_put_contents("key","000000000000000000");
+file_put_contents($expaid, base64_encode(gzdeflate($ss)));
+echo "$bgreen    Paket 30 Hari Aktif \n";sleep(1);
+echo "$bcyan    Aktif : ".date("d-m-Y h:i:s")."
+$byellow    Berakhir : $ss 23:59:59\n";
+break;
+else:
+echo $banner."$bred Sorry, Key$bwhite $key$bred Invalid \n";
+continue;
+endif;
+endif;
+}
+
+}

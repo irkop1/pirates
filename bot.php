@@ -1,5 +1,3 @@
-<?php
-
 
 system("rm -f .time");
 # Color

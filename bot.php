@@ -1,4 +1,3 @@
-
 system("rm -f .time");
 # Color
 $red = "\e[1;31m";
